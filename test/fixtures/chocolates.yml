@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: Almond Truffles
+  desc: An almond truffle crafted from the finest Selbourne Chocolate.
+
+two:
+  name: Chocoreos
+  desc: A crunchy combo of two timeless classics - the Oreo cookie and dark chocolate.

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @chocolate.name %>
+</p>
+
+<p>
+  <b>Desc:</b>
+  <%= @chocolate.desc %>
+</p>
+
+
+<%= link_to 'Edit', edit_chocolate_path(@chocolate) %> |
+<%= link_to 'Back', chocolates_path %>
