@@ -24,6 +24,13 @@ group :assets do
   gem 'closure-compiler'
 end
 
+group :development, :test do
+  gem 'spork'
+  gem 'rspec-rails'
+  gem 'autotest-rails'
+  gem 'autotest-fsevent'
+  gem 'autotest-growl'
+end
 
 gem 'jquery-rails'
 
