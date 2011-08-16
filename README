@@ -1,3 +1,14 @@
+== Installing and running Schock, the catalog and shopping site.
+
+* Ensure that RVM is installed on your machine
+* Download and install Ruby 1.9.2-p180 via RVM. Use only p180, p290 seems to have problems
+* Come into the directory and accept the .rvmrc
+* Run `bundle install --binstubs` to install all the deps with their executables
+* Run `bin/autotest` for automatic testing, and `bin/spork` for faster tests
+* Run `bin/rails server` to run the server locally
+
+
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
