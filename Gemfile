@@ -1,8 +1,7 @@
 source 'http://rubygems.org'
 
-# gem 'rails', '3.1.0.rc5'
 
-# Bundle edge Rails instead:
+# using edge Rails:
 gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 # gem 'pg'
@@ -10,14 +9,7 @@ gem 'sqlite3'
 
 gem 'json'
 
-# Gems used only for assets and not required
-# in production environments by default.
-# group :assets do
-#   gem 'sass-rails', "~> 3.1.0.rc"
-#   gem 'coffee-rails', "~> 3.1.0.rc"
-#   gem 'closure-compiler'
-# end
-
+# Gems used only for assets and not required in production
 group :assets do
   gem 'sass-rails',  :git => 'git://github.com/rails/sass-rails.git'
   gem 'coffee-rails',  :git => 'git://github.com/rails/coffee-rails.git'
@@ -34,12 +26,4 @@ end
 
 gem 'jquery-rails'
 
-# Use unicorn as the web server
 gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'ruby-debug'
-
