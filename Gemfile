@@ -1,22 +1,14 @@
 source 'http://rubygems.org'
 
-
-# using edge Rails:
-gem 'rails',     :git => 'git://github.com/rails/rails.git'
-
-# gem 'pg'
-
-group :production do
-  gem 'pg'
-end
-
+gem 'rails', '~> 3.1.rc'
+gem 'jquery-rails'
+gem 'unicorn'
 gem 'json'
 
-# Gems used only for assets and not required in production
 group :assets do
-  gem 'sass-rails',  :git => 'git://github.com/rails/sass-rails.git'
-  gem 'coffee-rails',  :git => 'git://github.com/rails/coffee-rails.git'
-  gem 'closure-compiler'
+  gem 'sass-rails', '~> 3.1.rc'
+  gem 'coffee-rails', '~> 3.1.rc'
+  gem 'uglifier'
 end
 
 group :development, :test do
@@ -26,8 +18,9 @@ group :development, :test do
   gem 'autotest-rails'
   gem 'autotest-fsevent'
   gem 'autotest-growl'
+  gem 'foreman'
 end
 
-gem 'jquery-rails'
-
-gem 'unicorn'
+group :production do
+  gem 'pg'
+end

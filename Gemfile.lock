@@ -1,76 +1,37 @@
-GIT
-  remote: git://github.com/rails/coffee-rails.git
-  revision: 92b159a632b5c09dee73ba5d62591efd387ecc1b
-  specs:
-    coffee-rails (3.2.0.beta)
-      coffee-script (>= 2.2.0)
-      railties (~> 3.2.0.beta)
-
-GIT
-  remote: git://github.com/rails/rails.git
-  revision: bb4f687bc670932f93a7befe07bfb2859a61411a
-  specs:
-    actionmailer (3.2.0.beta)
-      actionpack (= 3.2.0.beta)
-      mail (~> 2.3.0)
-    actionpack (3.2.0.beta)
-      activemodel (= 3.2.0.beta)
-      activesupport (= 3.2.0.beta)
-      builder (~> 3.0.0)
-      erubis (~> 2.7.0)
-      i18n (~> 0.6)
-      rack (~> 1.3.2)
-      rack-cache (~> 1.0.2)
-      rack-mount (~> 0.8.1)
-      rack-test (~> 0.6.0)
-      sprockets (~> 2.0.0.beta.12)
-    activemodel (3.2.0.beta)
-      activesupport (= 3.2.0.beta)
-      bcrypt-ruby (~> 2.1.4)
-      builder (~> 3.0.0)
-      i18n (~> 0.6)
-    activerecord (3.2.0.beta)
-      activemodel (= 3.2.0.beta)
-      activesupport (= 3.2.0.beta)
-      arel (~> 2.2.0)
-      tzinfo (~> 0.3.29)
-    activeresource (3.2.0.beta)
-      activemodel (= 3.2.0.beta)
-      activesupport (= 3.2.0.beta)
-    activesupport (3.2.0.beta)
-      i18n (~> 0.6)
-      multi_json (~> 1.0)
-    rails (3.2.0.beta)
-      actionmailer (= 3.2.0.beta)
-      actionpack (= 3.2.0.beta)
-      activerecord (= 3.2.0.beta)
-      activeresource (= 3.2.0.beta)
-      activesupport (= 3.2.0.beta)
-      bundler (~> 1.0)
-      railties (= 3.2.0.beta)
-    railties (3.2.0.beta)
-      actionpack (= 3.2.0.beta)
-      activesupport (= 3.2.0.beta)
-      rack-ssl (~> 1.3.2)
-      rake (>= 0.8.7)
-      rdoc (~> 3.4)
-      thor (~> 0.14.6)
-
-GIT
-  remote: git://github.com/rails/sass-rails.git
-  revision: 1af944df1acfbf353af0ac23f966365b0aa68c4e
-  specs:
-    sass-rails (3.1.1.alpha.0)
-      actionpack (~> 3.2.0.beta)
-      railties (~> 3.2.0.beta)
-      sass (>= 3.1.4)
-      sprockets (>= 2.0.0.beta.9)
-
 GEM
   remote: http://rubygems.org/
   specs:
     ZenTest (4.6.1)
-    arel (2.2.0)
+    actionmailer (3.1.0.rc5)
+      actionpack (= 3.1.0.rc5)
+      mail (~> 2.3.0)
+    actionpack (3.1.0.rc5)
+      activemodel (= 3.1.0.rc5)
+      activesupport (= 3.1.0.rc5)
+      builder (~> 3.0.0)
+      erubis (~> 2.7.0)
+      i18n (~> 0.6)
+      rack (~> 1.3.1)
+      rack-cache (~> 1.0.2)
+      rack-mount (~> 0.8.1)
+      rack-test (~> 0.6.0)
+      sprockets (~> 2.0.0.beta.12)
+    activemodel (3.1.0.rc5)
+      activesupport (= 3.1.0.rc5)
+      bcrypt-ruby (~> 2.1.4)
+      builder (~> 3.0.0)
+      i18n (~> 0.6)
+    activerecord (3.1.0.rc5)
+      activemodel (= 3.1.0.rc5)
+      activesupport (= 3.1.0.rc5)
+      arel (~> 2.1.4)
+      tzinfo (~> 0.3.29)
+    activeresource (3.1.0.rc5)
+      activemodel (= 3.1.0.rc5)
+      activesupport (= 3.1.0.rc5)
+    activesupport (3.1.0.rc5)
+      multi_json (~> 1.0)
+    arel (2.1.4)
     autotest-fsevent (0.2.5)
       sys-uname
     autotest-growl (0.2.9)
@@ -78,7 +39,11 @@ GEM
       ZenTest
     bcrypt-ruby (2.1.4)
     builder (3.0.0)
-    closure-compiler (1.1.1)
+    coffee-rails (3.1.0.rc.5)
+      actionpack (~> 3.1.0.rc1)
+      coffee-script (>= 2.2.0)
+      railties (~> 3.1.0.rc1)
+      sprockets (>= 2.0.0.beta.9)
     coffee-script (2.2.0)
       coffee-script-source
       execjs
@@ -87,6 +52,9 @@ GEM
     erubis (2.7.0)
     execjs (1.2.4)
       multi_json (~> 1.0)
+    foreman (0.19.0)
+      term-ansicolor (~> 1.0.5)
+      thor (>= 0.13.6)
     hike (1.2.0)
     i18n (0.6.0)
     jquery-rails (1.0.12)
@@ -100,6 +68,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.16)
     multi_json (1.0.3)
+    pg (0.11.0)
     polyglot (0.3.2)
     rack (1.3.2)
     rack-cache (1.0.2)
@@ -110,9 +79,24 @@ GEM
       rack
     rack-test (0.6.1)
       rack (>= 1.0)
+    rails (3.1.0.rc5)
+      actionmailer (= 3.1.0.rc5)
+      actionpack (= 3.1.0.rc5)
+      activerecord (= 3.1.0.rc5)
+      activeresource (= 3.1.0.rc5)
+      activesupport (= 3.1.0.rc5)
+      bundler (~> 1.0)
+      railties (= 3.1.0.rc5)
+    railties (3.1.0.rc5)
+      actionpack (= 3.1.0.rc5)
+      activesupport (= 3.1.0.rc5)
+      rack-ssl (~> 1.3.2)
+      rake (>= 0.8.7)
+      rdoc (~> 3.4)
+      thor (~> 0.14.6)
     raindrops (0.7.0)
     rake (0.9.2)
-    rdoc (3.9.1)
+    rdoc (3.9.2)
     rspec (2.6.0)
       rspec-core (~> 2.6.0)
       rspec-expectations (~> 2.6.0)
@@ -127,6 +111,11 @@ GEM
       railties (~> 3.0)
       rspec (~> 2.6.0)
     sass (3.1.7)
+    sass-rails (3.1.0.rc.5)
+      actionpack (~> 3.1.0.rc1)
+      railties (~> 3.1.0.rc1)
+      sass (>= 3.1.4)
+      sprockets (>= 2.0.0.beta.9)
     spork (0.8.5)
     sprockets (2.0.0.beta.13)
       hike (~> 1.2)
@@ -134,12 +123,16 @@ GEM
       tilt (!= 1.3.0, ~> 1.1)
     sqlite3 (1.3.4)
     sys-uname (0.8.5)
+    term-ansicolor (1.0.6)
     thor (0.14.6)
     tilt (1.3.2)
     treetop (1.4.10)
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.29)
+    uglifier (1.0.0)
+      execjs (>= 0.3.0)
+      multi_json (>= 1.0.2)
     unicorn (4.0.1)
       kgio (~> 2.4)
       rack
@@ -152,13 +145,15 @@ DEPENDENCIES
   autotest-fsevent
   autotest-growl
   autotest-rails
-  closure-compiler
-  coffee-rails!
+  coffee-rails (~> 3.1.rc)
+  foreman
   jquery-rails
   json
-  rails!
+  pg
+  rails (~> 3.1.rc)
   rspec-rails
-  sass-rails!
+  sass-rails (~> 3.1.rc)
   spork
   sqlite3
+  uglifier
   unicorn
