@@ -1,4 +1,6 @@
 Schock::Application.routes.draw do
+  resources :chocolates
+
   get "home/index"
 
   # The priority is based upon order of creation:
