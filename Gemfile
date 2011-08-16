@@ -5,7 +5,10 @@ source 'http://rubygems.org'
 gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 # gem 'pg'
-gem 'sqlite3'
+
+group :production do
+  gem 'pg'
+end
 
 gem 'json'
 
@@ -17,6 +20,7 @@ group :assets do
 end
 
 group :development, :test do
+  gem 'sqlite3'
   gem 'spork'
   gem 'rspec-rails'
   gem 'autotest-rails'
