@@ -20,6 +20,9 @@ group :development, :test do
   gem 'autotest-fsevent'
   gem 'autotest-growl'
   gem 'foreman'
+  gem 'cucumber-rails'
+  gem 'database_cleaner'
+  gem 'gtk2'
 end
 
 group :production do
