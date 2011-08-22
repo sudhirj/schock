@@ -1,44 +1,24 @@
 class ChocolatesController < ApplicationController
-  # GET /chocolates
-  # GET /chocolates.json
+
   def index
     @chocolates = Chocolate.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @chocolates }
-    end
+    stream_with @chocolates
   end
 
-  # GET /chocolates/1
-  # GET /chocolates/1.json
   def show
-    @chocolate = Chocolate.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @chocolate }
-    end
+    @chocolate = Chocolate.find(params[:id])    
+    stream_with @chocolate
   end
 
-  # GET /chocolates/new
-  # GET /chocolates/new.json
   def new
     @chocolate = Chocolate.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @chocolate }
-    end
+    respond_with @chocolate 
   end
 
-  # GET /chocolates/1/edit
   def edit
     @chocolate = Chocolate.find(params[:id])
   end
 
-  # POST /chocolates
-  # POST /chocolates.json
   def create
     @chocolate = Chocolate.new(params[:chocolate])
 
@@ -53,8 +33,6 @@ class ChocolatesController < ApplicationController
     end
   end
 
-  # PUT /chocolates/1
-  # PUT /chocolates/1.json
   def update
     @chocolate = Chocolate.find(params[:id])
 
@@ -69,8 +47,6 @@ class ChocolatesController < ApplicationController
     end
   end
 
-  # DELETE /chocolates/1
-  # DELETE /chocolates/1.json
   def destroy
     @chocolate = Chocolate.find(params[:id])
     @chocolate.destroy

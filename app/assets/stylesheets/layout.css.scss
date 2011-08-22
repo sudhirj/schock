@@ -1,0 +1,62 @@
+@import "compass/reset";
+@import "compass/css3/border-radius";
+$base: #784e3d;
+$b1: #3d2216;
+$b2: #26140c;
+$c1: #ab8574;
+$c2: #d6bcb1;
+$gr: 1.618;
+$g1: 1em * $gr;
+$g2: $g1 * $gr;
+$g3: $g2 * $gr;
+$g3: $g2 * $gr;
+$g4: $g3 * $gr;
+
+body{
+    font-family: sans-serif;
+    font-size: 14px;
+    width: 100%;
+    margin: $g1 auto;
+    font-family: 'Vollkorn';
+    background: $base;
+}
+
+h1 {
+    font-size: $g4;
+}
+h3 {
+    font-size:$g1;
+}
+.header {
+    text-align:center;
+    color: $c1;
+    background: $b2;
+    padding: $g1;
+    .logo {
+        font-family: 'Tangerine';
+        color: $c2;
+    }
+}
+.gallery {
+    .galleria-container{
+        background: transparent;
+    }
+    @include border-radius(1em);
+    width: 700px;
+    background: $b1;
+    margin: $g1 auto;  
+    padding-top: $g1;  
+    
+    
+}
+.contact{
+    line-height: $g1;
+    background: $b1;
+    color: $c1;
+    padding: $g1;
+    a {
+        color: $c2;
+    }
+    text-align: center;
+}
+
