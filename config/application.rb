@@ -42,7 +42,7 @@ module Schock
     
     if Rails.env.test? 
       initializer :after => :initialize_dependency_mechanism do 
-      ActiveSupport::Dependencies.mechanism = :load 
+        ActiveSupport::Dependencies.mechanism = :load 
       end 
     end
   end

@@ -22,7 +22,6 @@ group :development, :test do
   gem 'foreman'
   gem 'cucumber-rails'
   gem 'database_cleaner'
-  gem 'gtk2'
 end
 
 group :production do
