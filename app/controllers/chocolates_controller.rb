@@ -21,39 +21,25 @@ class ChocolatesController < ApplicationController
 
   def create
     @chocolate = Chocolate.new(params[:chocolate])
-
-    respond_to do |format|
-      if @chocolate.save
-        format.html { redirect_to @chocolate, notice: 'Chocolate was successfully created.' }
-        format.json { render json: @chocolate, status: :created, location: @chocolate }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @chocolate.errors, status: :unprocessable_entity }
-      end
+    if @chocolate.save
+      redirect_to @chocolate, notice: 'Chocolate was successfully created.'         
+    else
+      render action: "new" 
     end
   end
 
   def update
     @chocolate = Chocolate.find(params[:id])
-
-    respond_to do |format|
-      if @chocolate.update_attributes(params[:chocolate])
-        format.html { redirect_to @chocolate, notice: 'Chocolate was successfully updated.' }
-        format.json { head :ok }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @chocolate.errors, status: :unprocessable_entity }
-      end
+    if @chocolate.update_attributes(params[:chocolate])
+      redirect_to @chocolate, notice: 'Chocolate was successfully updated.' 
+    else
+      render action: "edit"
     end
   end
 
   def destroy
     @chocolate = Chocolate.find(params[:id])
     @chocolate.destroy
-
-    respond_to do |format|
-      format.html { redirect_to chocolates_url }
-      format.json { head :ok }
-    end
+    redirect_to chocolates_url
   end
 end

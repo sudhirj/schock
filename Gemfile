@@ -20,9 +20,12 @@ group :development, :test do
   gem 'autotest-fsevent'
   gem 'autotest-growl'
   gem 'foreman'
+  gem 'capybara'
   gem 'cucumber-rails'
   gem 'database_cleaner'
 end
+
+gem 'pry', :group => :development
 
 group :production do
   gem 'pg'

@@ -5,10 +5,30 @@
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  
 </head>
 <body>
+<div class="wrapper">
+  <header>
+    <h1 class='name'>Schokolade Tante</h1>
+  </header>
 
+  
 <%= yield %>
-
+</div>
+<script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Vollkorn:400italic,400,700:latin', 'Tangerine', 'Leckerli+One' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })(); 
+</script>
 </body>
 </html>

@@ -1,16 +1,28 @@
 @import "compass/reset";
-@import "compass/css3/border-radius";
-$base: #784e3d;
+@import "compass/css3";
+@import 'grid';
+
+
 $b1: #3d2216;
 $b2: #26140c;
 $c1: #ab8574;
 $c2: #d6bcb1;
+
 $gr: 1.618;
+
 $g1: 1em * $gr;
 $g2: $g1 * $gr;
 $g3: $g2 * $gr;
 $g3: $g2 * $gr;
 $g4: $g3 * $gr;
+
+html {
+    margin: 0;
+    padding: 0;
+    background-image: url(3.png), url(5.png);
+    height: 100%;
+    
+}
 
 body{
     font-family: sans-serif;
@@ -18,7 +30,12 @@ body{
     width: 100%;
     margin: $g1 auto;
     font-family: 'Vollkorn';
-    background: $base;
+    
+}
+
+.wrapper {
+    @include row();
+    margin: auto;
 }
 
 h1 {
@@ -27,36 +44,17 @@ h1 {
 h3 {
     font-size:$g1;
 }
-.header {
+header {
     text-align:center;
-    color: $c1;
     background: $b2;
     padding: $g1;
-    .logo {
-        font-family: 'Tangerine';
-        color: $c2;
-    }
-}
-.gallery {
-    .galleria-container{
-        background: transparent;
-    }
-    @include border-radius(1em);
-    width: 700px;
-    background: $b1;
-    margin: $g1 auto;  
-    padding-top: $g1;  
-    
-    
-}
-.contact{
-    line-height: $g1;
-    background: $b1;
-    color: $c1;
-    padding: $g1;
-    a {
-        color: $c2;
-    }
-    text-align: center;
-}
+    @include box-shadow(inset 0 0 5px 5px rgba(0,0,0,0.3));
+    @include border-radius(2em);
+    border: thin solid $b2;
 
+    h1 {
+        font-family: 'Leckerli One';
+        color: $c2;
+        text-shadow: 5px -1px -1px #000;
+    }
+}
