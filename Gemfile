@@ -9,6 +9,7 @@ group :assets do
   gem 'sass-rails', '~> 3.1'
   gem 'coffee-rails', '~> 3.1'
   gem 'closure-compiler'
+  gem 'uglifier'
   gem 'compass', :git => 'git://github.com/chriseppstein/compass.git', :branch => 'rails31'
 end
 
