@@ -2,8 +2,7 @@
 <html>
 <head>
   <title>Schockolade Tante : Bangalore's Best Chocolates</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
+  <%= stylesheet_link_tag    "application" %>  
   <%= csrf_meta_tags %>
   
 </head>
@@ -16,6 +15,8 @@
   
 <%= yield %>
 </div>
+<%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" %>
+<%= javascript_include_tag "application" %>
 <script type="text/javascript">
   WebFontConfig = {
     google: { families: [ 'Vollkorn:400italic,400,700:latin', 'Tangerine', 'Leckerli+One' ] }
@@ -30,5 +31,6 @@
     s.parentNode.insertBefore(wf, s);
   })(); 
 </script>
+
 </body>
 </html>
