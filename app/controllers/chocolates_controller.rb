@@ -2,17 +2,14 @@ class ChocolatesController < ApplicationController
 
   def index
     @chocolates = Chocolate.all
-    stream_with @chocolates
   end
 
   def show
     @chocolate = Chocolate.find(params[:id])    
-    stream_with @chocolate
   end
 
   def new
     @chocolate = Chocolate.new
-    respond_with @chocolate 
   end
 
   def edit
