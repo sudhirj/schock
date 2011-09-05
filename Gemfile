@@ -5,6 +5,10 @@ gem 'jquery-rails'
 gem 'unicorn'
 gem 'json'
 
+group :production do
+  gem 'pg'
+end
+
 group :assets do
   gem 'sass-rails', '~> 3.1'
   gem 'coffee-rails', '~> 3.1'
@@ -23,10 +27,7 @@ group :development, :test do
   gem 'capybara'
   gem 'cucumber-rails'
   gem 'database_cleaner'
+  gem 'pry'
 end
 
-gem 'pry', :group => :development
 
-group :production do
-  gem 'pg'
-end
