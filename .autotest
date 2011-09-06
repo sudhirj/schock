@@ -1,15 +1,12 @@
 require 'autotest/fsevent'
 require 'autotest/growl'
+require 'autotest/bundler'
 
-# Override autotest default magic to rerun all tests every time a
-# change is detected on the file system.
-class Autotest
+Autotest::Growl::clear_terminal = false
+Autotest::Growl::show_modified_files = true
 
-  def get_to_green
-    begin
-      rerun_all_tests
-      wait_for_changes unless all_good
-    end until all_good
+Autotest.add_hook :initialize do |autotest|
+  %w{.git .svn .hg .DS_Store ._* vendor tmp log doc}.each do |exception|
+    autotest.add_exception(exception)
   end
-
 end
