@@ -8,6 +8,9 @@ $b2: #26140c;
 $c1: #ab8574;
 $c2: #d6bcb1;
 
+$fancyfont: 'Leckerli One', Georgia;
+$basefont: Georgia, serif;    
+$linkfont: helvetica, arial;
 $shadow: rgba(0,0,0,0.3);
 
 $gr: 1.618;
@@ -29,8 +32,7 @@ body{
     font-size: 14px;
     width: 100%;
     color: $b2;
-    padding: 0 $g1 $g1 $g1;
-    font-family: 'Georgia';    
+    font-family: $basefont;
 }
 
 
@@ -49,6 +51,7 @@ a {
     padding: $g1;
     @include border-radius(1em);
     border-top: thin solid $c1;
+    border-bottom: thin solid $c1;
 }
 header {
     @include row();
@@ -57,7 +60,7 @@ header {
     position: relative;
     @include border-radius(1em);
     h1 {
-        font-family: 'Leckerli One';
+        font-family: $fancyfont;
         color: $b1;
         display: inline-block;
     }
@@ -82,11 +85,23 @@ header {
             background: $b1;
             @include border-bottom-radius(0.618em);
             @include transition-duration(0.5s);
-            @include transition-property("background, color");
+            @include transition-property("background, color, opacity");
+            font-family: $linkfont;
             &:hover{
                 color: $b1;
                 background: $c2;
             }
+            &:active{
+                opacity: 0.5;
+            }
         }
     }
+}
+
+footer{
+    font-size: 0.8em;
+    text-align: center;
+    display: block;
+    padding: $g1;
+    color: $b1;
 }
