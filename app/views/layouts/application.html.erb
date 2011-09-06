@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Schockolade Tante : Bangalore's Best Chocolates</title>
+  <title>Schockolade Tante : Bangalore's finest handcrafted Chocolates.</title>
   <%= stylesheet_link_tag    "application" %>  
   <%= csrf_meta_tags %>
   <meta charset="utf-8" />
@@ -10,8 +10,12 @@
 <body>
 
   <header>
-    <h1 class='name'>Schokolade Tante</h1>
+    <a href="<%=root_path%>"><h1 class='name'>Schokolade Tante</h1></a>
     <h4>Bangalore's finest handcrafted Chocolates.</h4>
+    <nav>      
+      <a href="#">about us</a>
+      <a href="#">contact & map</a>
+    </nav>
   </header>  
   <section id="content">
     <%= yield %>
