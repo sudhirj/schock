@@ -1,17 +1,5 @@
 <h3>The Chocolist</h3>
-
-
-
 <% @chocolates.each do |chocolate| %>
-
-  <tr>
-    <td><%= chocolate.name %></td>
-    <td class="desc"><%= chocolate.desc %></td>
-    <td class="action"><%= link_to 'Show', chocolate %></td>
-    <td class="action"><%= link_to 'Edit', edit_chocolate_path(chocolate) %></td>
-    <td class="action"><%= link_to 'Delete', chocolate, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
+<%= render :partial => 'chocolate', :locals => {chocolate: chocolate} %>
 <% end %>
-<br />
-
 <%= link_to 'New Chocolate', new_chocolate_path %>

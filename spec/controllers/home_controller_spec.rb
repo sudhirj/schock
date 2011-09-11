@@ -1,8 +1,9 @@
 require 'spec_helper'
 
 describe HomeController do
-
+  
   describe "GET 'index'" do
+    
     it "should be successful" do
       get 'index'
       response.should be_success      
@@ -13,6 +14,7 @@ describe HomeController do
       get 'index'
       assigns[:chocolates].should == :all_chocolates
     end
-  end
+    
+  end  
   
 end
