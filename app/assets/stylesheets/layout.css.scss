@@ -105,3 +105,25 @@ footer{
     padding: $g1;
     color: $b1;
 }
+
+table {
+    margin: $g1 0;
+    td, th {
+        padding: 0.5em;
+        vertical-align: top;
+    }
+    
+    th {
+        font-weight: bold;
+    }
+    td.action a {
+        background: $c2;
+        padding: 0.2em 0.5em;
+        text-transform: lowercase;
+        font-size: 0.75em;
+        font-family: $linkfont ;
+        vertical-align: baseline;
+        @include border-radius();
+    }
+
+}

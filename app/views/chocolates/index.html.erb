@@ -1,25 +1,17 @@
-<h1>Listing chocolates</h1>
+<h3>The Chocolist</h3>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Desc</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+
 
 <% @chocolates.each do |chocolate| %>
+
   <tr>
     <td><%= chocolate.name %></td>
-    <td><%= chocolate.desc %></td>
-    <td><%= link_to 'Show', chocolate %></td>
-    <td><%= link_to 'Edit', edit_chocolate_path(chocolate) %></td>
-    <td><%= link_to 'Destroy', chocolate, confirm: 'Are you sure?', method: :delete %></td>
+    <td class="desc"><%= chocolate.desc %></td>
+    <td class="action"><%= link_to 'Show', chocolate %></td>
+    <td class="action"><%= link_to 'Edit', edit_chocolate_path(chocolate) %></td>
+    <td class="action"><%= link_to 'Delete', chocolate, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
-</table>
-
 <br />
 
 <%= link_to 'New Chocolate', new_chocolate_path %>
