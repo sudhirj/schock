@@ -5,11 +5,14 @@
 */ 
 $width: 960px; /* total with of page */ 
 $columns: 24; /* number of columns */ 
-$col_margin: 0; /* margin between columns */ 
+$col_margin: 15px; /* margin between columns */ 
 /* math magic */ 
 $col_width: ($width - ($col_margin * ($columns - 1))) / $columns; $col_total_width: $col_width + $col_margin; 
 /* create row div */ 
-@mixin row() {width: $width; } 
+@mixin row() {
+    width: $width; 
+    @include box-sizing(border-box);
+} 
 /* create a column div */ 
 @mixin col($n: 1) { display: inline-block; @include span($n); } 
 /* make an element span n columns */ 
@@ -17,6 +20,7 @@ $col_width: ($width - ($col_margin * ($columns - 1))) / $columns; $col_total_wid
     width: ($n * $col_width) + (($n - 1) * $col_margin); 
     @if $n == $columns { margin-right: 0; } 
     @else { margin-right: $col_margin; }
+    @include box-sizing(border-box);
 } 
 /* the last column in a row needs this */ 
 @mixin last() { margin-right: 0; } 
