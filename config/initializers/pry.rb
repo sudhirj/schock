@@ -1,2 +1,4 @@
-require 'pry'
-IRB = Pry
+unless Rails.env.production?
+  require 'pry'
+  IRB = Pry
+end
