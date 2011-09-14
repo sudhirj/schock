@@ -48,15 +48,14 @@ a {
 #content {
     @include row();
     margin: auto;
-    padding: $g1;
-    @include border-radius(1em);
+    padding: $g1 0;
     border-top: thin solid $c1;
     border-bottom: thin solid $c1;
 }
 header {
     @include row();
     margin: auto;
-    padding: $g1;
+    padding: $g1 0;
     position: relative;
     @include border-radius(1em);
     h1 {
@@ -67,7 +66,7 @@ header {
     h4 {
         $factor: 0.7;
         position: absolute;    
-        right: $g1;
+        right: 0;
         bottom: $g1;
         color: $b2;        
         font-style: italic;
@@ -76,7 +75,7 @@ header {
     nav {
         position: absolute;
         top: 0;
-        right: $g3;
+        right: 0;
         a {
             padding: 0.618em;
             margin-left: 0.618em;
@@ -104,6 +103,7 @@ footer{
     display: block;
     padding: $g1;
     color: $b1;
+    font-family: $linkfont;
 }
 
 table {

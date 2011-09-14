@@ -1,3 +1,15 @@
-// Place all the styles related to the chocolates controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "layout";
+@import "grid";
+
+.chocolate{
+    display: inline-block;
+    @include col(6);
+    text-align: center;
+    padding: 0.5em;
+    border: thin solid $c2;
+    @include border-radius(0.3em);
+}
+
+.chocolate-listing {
+    @include col(18);
+}
