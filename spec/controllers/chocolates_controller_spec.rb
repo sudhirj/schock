@@ -6,7 +6,8 @@ describe ChocolatesController do
   def valid_attributes
     {
       :name => 'Almond Truffles',
-      :desc => 'Dark Chocolate Truffles made with pure Almonds'
+      :desc => 'Dark Chocolate Truffles made with pure Almonds',
+      :price => 0.4      
     }
   end
 

@@ -2,7 +2,6 @@
 @import "compass/css3";
 @import 'grid';
 
-
 $b1: #3d2216;
 $b2: #26140c;
 $c1: #ab8574;
@@ -13,14 +12,6 @@ $basefont: Georgia, serif;
 $linkfont: helvetica, arial;
 $shadow: rgba(0,0,0,0.3);
 
-$gr: 1.618;
-
-$g1: 1em * $gr;
-$g2: $g1 * $gr;
-$g3: $g2 * $gr;
-$g3: $g2 * $gr;
-$g4: $g3 * $gr;
-
 html {
     margin: 0;
     padding: 0;
@@ -29,12 +20,11 @@ html {
 
 body{
     font-family: sans-serif;
-    font-size: 14px;
+    font-size: $base_size;
     width: 100%;
     color: $b2;
     font-family: $basefont;
 }
-
 
 h1 {
     font-size: $g3;

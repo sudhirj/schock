@@ -12,4 +12,8 @@ describe Chocolate do
   it "fails validation with very short descriptions" do
     Chocolate.new(:desc => 'A').should have(1).errors_on(:desc)
   end
+  
+  it "fails when no prices are given" do
+    Chocolate.new.should have(1).error_on(:price)
+  end
 end

@@ -3,9 +3,19 @@
     The result of the following equation has to be an integer, not a fraction: 
     (width - (columns - 1) * col_margin) / columns = N 
 */ 
+$base_size: 14px;
+
+$gr: 1.618;
+
+$g1: 1em * $gr;
+$g2: $g1 * $gr;
+$g3: $g2 * $gr;
+$g3: $g2 * $gr;
+$g4: $g3 * $gr;
+
 $width: 960px; /* total with of page */ 
 $columns: 24; /* number of columns */ 
-$col_margin: 15px; /* margin between columns */ 
+$col_margin: $gr * $base_size; /* margin between columns */ 
 /* math magic */ 
 $col_width: ($width - ($col_margin * ($columns - 1))) / $columns; $col_total_width: $col_width + $col_margin; 
 /* create row div */ 
