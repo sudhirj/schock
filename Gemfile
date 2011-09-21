@@ -13,7 +13,7 @@ group :assets do
   gem 'sass-rails', '~> 3.1'
   gem 'coffee-rails', '~> 3.1'
   gem 'closure-compiler'
-  gem 'compass'	
+  gem 'compass', "~> 0.12.alpha"
 end
 
 group :development, :test do
