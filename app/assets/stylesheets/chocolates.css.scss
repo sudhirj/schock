@@ -1,14 +1,18 @@
 @import "layout";
 
-.chocolate{
-    display: inline-block;
-    @include col(6);
-    text-align: center;
-    padding: $g1;
-    border: thin solid $c2;
-    @include border-radius(0.3em);
-}
-
 .chocolate-listing {
-    @include col(18);
+    @include col(16);
+	.chocolate{
+	    display: inline-block;
+	    @include col(5);
+	    text-align: center;
+	    padding: $g1;
+	    border: thin solid $c2;
+	    @include border-radius(0.3em);
+		margin: 0 $g1 $g1 0;
+		&:nth-child(3n){
+			@include last();
+		}
+	}
+
 }

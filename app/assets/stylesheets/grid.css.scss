@@ -13,9 +13,9 @@ $g3: $g2 * $gr;
 $g3: $g2 * $gr;
 $g4: $g3 * $gr;
 
-$width: 960px; /* total with of page */ 
+$width: 70em; /* total with of page */ 
 $columns: 24; /* number of columns */ 
-$col_margin: $gr * $base_size; /* margin between columns */ 
+$col_margin: $gr * 1em; /* margin between columns */ 
 /* math magic */ 
 $col_width: ($width - ($col_margin * ($columns - 1))) / $columns; $col_total_width: $col_width + $col_margin; 
 /* create row div */ 
