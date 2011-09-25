@@ -1,6 +1,12 @@
-@import "compass/reset";
-@import "compass/css3";
-@import 'grid';
+$base_size: 14px;
+
+$gr: 1.618;
+
+$g1: 1em * $gr;
+$g2: $g1 * $gr;
+$g3: $g2 * $gr;
+$g3: $g2 * $gr;
+$g4: $g3 * $gr;
 
 $b1: #3d2216;
 $b2: #26140c;
@@ -12,108 +18,112 @@ $basefont: Georgia, serif;
 $linkfont: helvetica, arial;
 $shadow: rgba(0,0,0,0.3);
 
+$width: 72em;
+
 html {
-    margin: 0;
-    padding: 0;
-    height: 100%;    
+  margin: 0;
+  padding: 0;
+  height: 100%;    
 }
 
 body{
-    font-family: sans-serif;
-    font-size: $base_size;
-    width: 100%;
-    color: $b2;
-    font-family: $basefont;
+  font-family: sans-serif;
+  font-size: $base_size;
+  width: $width;
+  margin: auto;
+  color: $b2;
+  font-family: $basefont;
 }
 
 h1 {
-    font-size: $g3;
+  font-size: $g3;
 }
 h3 {
-    font-size:$g1;
+  font-size:$g1;
 }
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 #content {
-    @include row();
-    margin: auto;
-    padding: $g1 0;
-    border-top: thin solid $c1;
-    border-bottom: thin solid $c1;
+  margin: auto;
+  padding: $g1 0;
+  border-top: 2px solid $c1;
+  border-bottom: 2px solid $c1;
 }
 header {
-    @include row();
-    margin: auto;
-    padding: $g1 0;
-    position: relative;
-    @include border-radius(1em);
-    h1 {
-        font-family: $fancyfont;
+  margin: auto;
+  padding: $g1 0;
+  position: relative;
+  @include border-radius(1em);
+  line-height: 1em;
+  margin-top: $g1;
+  h1 {
+    font-family: $fancyfont;
+    color: $b1;
+    display: inline;
+
+  }
+  h4 {
+    $factor: 1/$gr;
+    position: absolute;
+    right: 0;
+    bottom: $g1;
+    color: $b2;        
+    text-align: right;
+    font-style: italic;
+    font-size: $g1 * $factor;        
+  }
+  nav {
+    position: absolute;
+    top: -$g1;
+    right: 0;
+    a {
+      padding: 0.618em 1em;
+      margin-left: 0.618em;
+      display: inline-block;
+      color: $c2;
+      background: $b1;
+      @include border-bottom-radius(0.318em);
+      @include transition-duration(0.5s);
+      @include transition-property("background, color, opacity");
+      font-family: $linkfont;
+      &:hover{
         color: $b1;
-        display: inline-block;
+        background: $c2;
+      }
+      &:active{
+        opacity: 0.5;
+      }
     }
-    h4 {
-        $factor: 0.7;
-        position: absolute;    
-        right: 0;
-        bottom: $g1;
-        color: $b2;        
-        font-style: italic;
-        font-size: $g1 * $factor;        
-    }
-    nav {
-        position: absolute;
-        top: 0;
-        right: 0;
-        a {
-            padding: 0.618em;
-            margin-left: 0.618em;
-            display: inline-block;
-            color: $c2;
-            background: $b1;
-            @include border-bottom-radius(0.618em);
-            @include transition-duration(0.5s);
-            @include transition-property("background, color, opacity");
-            font-family: $linkfont;
-            &:hover{
-                color: $b1;
-                background: $c2;
-            }
-            &:active{
-                opacity: 0.5;
-            }
-        }
-    }
+  }
 }
 
 footer{
-    font-size: 0.8em;
-    text-align: center;
-    display: block;
-    padding: $g1;
-    color: $b1;
-    font-family: $linkfont;
+  font-size: 0.8em;
+  text-align: center;
+  display: block;
+  padding: $g1;
+  color: $b1;
+  font-family: $linkfont;
 }
 
 table {
-    margin: $g1 0;
-    td, th {
-        padding: 0.5em;
-        vertical-align: top;
-    }
-    
-    th {
-        font-weight: bold;
-    }
-    td.action a {
-        background: $c2;
-        padding: 0.2em 0.5em;
-        text-transform: lowercase;
-        font-size: 0.75em;
-        font-family: $linkfont ;
-        vertical-align: baseline;
-        @include border-radius();
-    }
+  margin: $g1 0;
+  td, th {
+    padding: 0.5em;
+    vertical-align: top;
+  }
 
+  th {
+    font-weight: bold;
+  }
+  td.action a {
+    background: $c2;
+    padding: 0.2em 0.5em;
+    text-transform: lowercase;
+    font-size: 0.75em;
+    font-family: $linkfont ;
+    vertical-align: baseline;
+    @include border-radius();
+  }
 }

@@ -1,23 +1,25 @@
-@import "layout";
-
 .chocolate-listing {
-    @include col(9.0557);
-  	.chocolate{
-  		img {
-  		  max-width: 100%;
-  		  max-height: 7em;
-  		  margin-bottom: $g1;
-  		}
-	    display: inline-block;
-	    @include col(3);
-	    text-align: center;
-	    padding: $g1;
-	    border: thin solid $c2;
-	    @include border-radius(0.3em);
-		  margin: 0 $g1 $g1 0;
-		  &:nth-child(3n){
-			  @include last();
-		  }
-	}
-
+  width: ($width * 0.75);
+  .chocolate{
+    img {
+      max-width: 100%;
+      max-height: 9em;
+      margin-bottom: $g1;
+    }
+    h6 {
+      font-weight: bold;
+      color: $c1;
+    }
+    width: ($width - 4em)/4 ;
+    @include box-sizing(border-box);
+    display: inline-block;
+    text-align: center;
+    padding: $g1;
+    border: thin solid $c2;
+    @include border-radius(0.5em);
+    margin: 0 1.125em 1em 0;
+    &:nth-child(3n){
+      margin-right: 0;
+    }
+  }
 }
