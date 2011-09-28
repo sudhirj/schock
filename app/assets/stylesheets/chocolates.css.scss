@@ -1,6 +1,7 @@
 .chocolate-listing {
   width: ($width * 0.75);
   .chocolate{
+    cursor: pointer;
     img {
       max-width: 100%;
       max-height: 9em;
