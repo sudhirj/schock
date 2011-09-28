@@ -3,7 +3,7 @@ class CreateChocolates < ActiveRecord::Migration
     create_table :chocolates do |t|
       t.string :name
       t.text :desc
-
+      t.float :price
       t.timestamps
     end
   end

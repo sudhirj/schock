@@ -29,6 +29,7 @@ group :development, :test do
   gem 'cucumber-rails'
   gem 'database_cleaner'
   gem 'pry'
+  gem 'heroku'
 end
 
 
