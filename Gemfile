@@ -5,13 +5,13 @@ gem 'jquery-rails'
 gem 'unicorn'
 gem 'json'
 gem 'activeadmin'
-  
+gem 'sass-rails', '~> 3.1'  
+
 group :production do
   gem 'pg'
 end
 
 group :assets do
-  gem 'sass-rails', '~> 3.1'
   gem 'coffee-rails', '~> 3.1'
   gem 'closure-compiler'
   gem 'compass', "~> 0.12.alpha"
