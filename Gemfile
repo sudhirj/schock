@@ -3,7 +3,6 @@ source 'http://rubygems.org'
 gem 'rails', '~> 3.1'
 gem 'jquery-rails'
 gem 'unicorn'
-gem 'json'
 gem 'activeadmin'
   
 group :production do
