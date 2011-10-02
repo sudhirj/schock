@@ -1,6 +1,11 @@
 aside {
-  background: $c2;
+  background: $c1-trans;
   height: 10em;
-  display: inline-block !important;
+  width: ($width * 0.24);
+  display: inline-block;
   vertical-align: top;
+  float: right;
+  @include border-radius(0.5em);
+  padding: 0.5em;
+    @include box-sizing(border-box);
 }
