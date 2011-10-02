@@ -4,17 +4,27 @@
     cursor: pointer;
     img {
       max-width: 100%;
-      max-height: 9em;
-      margin-bottom: $g1;
+      max-height: 100%;
+      margin: auto;
     }
-    h6 {
-      font-weight: bold;
-      color: $c1;
+    position: relative;
+    .name {
+      color: $b1;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: block;      
+      padding: 0.81em;
+      background: $c1-trans;
+      text-align: right;
+      @include border-bottom-radius(0.5em);
+      font-family: $linkfont;
     }
-    width: ($width - 4em)/4 ;
+    width: ($width - 4em)/4;
+    height: ($width - 4em)/4;
     @include box-sizing(border-box);
     display: inline-block;
-    text-align: center;
     padding: $g1;
     border: thin solid $c2;
     @include border-radius(0.5em);

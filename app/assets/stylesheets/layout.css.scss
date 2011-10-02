@@ -8,14 +8,18 @@ $g3: $g2 * $gr;
 $g3: $g2 * $gr;
 $g4: $g3 * $gr;
 
-$b1: #3d2216;
-$b2: #26140c;
-$c1: #ab8574;
-$c2: #d6bcb1;
+$b1: rgba(41,15,2,1);
+$b2: rgba(117,43,6,1);
+$c1: rgba(229,176,101,1);
+$c1-trans: rgba(229,176,101,0.381);
+$c2: rgba(227,159,65,1);
+$c: rgba(255,228,140,1);
+
+$b1-trans: rgba(61, 34, 22, 0.8);
 
 $fancyfont: 'Leckerli One', Georgia;
 $basefont: Georgia, serif;    
-$linkfont: helvetica, arial;
+$linkfont: Nobile, helvetica, arial;
 $shadow: rgba(0,0,0,0.3);
 
 $width: 72em;
