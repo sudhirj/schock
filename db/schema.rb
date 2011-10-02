@@ -49,9 +49,9 @@ ActiveRecord::Schema.define(:version => 20110928161157) do
   create_table "chocolates", :force => true do |t|
     t.string   "name"
     t.text     "desc"
-    t.float    "price"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.float    "price"
   end
 
 end
