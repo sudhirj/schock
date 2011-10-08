@@ -1,4 +1,4 @@
-$base_size: 14px;
+$base_size: 16px;
 
 $gr: 1.618;
 
@@ -18,7 +18,7 @@ $c: rgba(255,228,140,1);
 $b1-trans: rgba(61, 34, 22, 0.8);
 
 $fancyfont: 'Leckerli One', Georgia;
-$basefont: Georgia, serif;    
+$basefont: Nobile, helvetica, arial;    
 $linkfont: Nobile, helvetica, arial;
 $shadow: rgba(0,0,0,0.3);
 
@@ -68,20 +68,19 @@ header {
 
   }
   h4 {
-    $factor: 1/$gr;
     position: absolute;
     right: 0;
     bottom: $g1;
     color: $b2;        
     text-align: right;
     font-style: italic;
-    font-size: $g1 * $factor;        
   }
   nav {
     position: absolute;
     top: -$g1;
     right: 0;
     a {
+      font-size: 0.8em;
       padding: 0.618em 1em;
       margin-left: 0.618em;
       display: inline-block;
@@ -103,7 +102,7 @@ header {
 }
 
 footer{
-  font-size: 0.8em;
+  font-size: 0.618em;
   text-align: center;
   display: block;
   padding: $g1;
