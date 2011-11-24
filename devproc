@@ -1,4 +1,4 @@
 spork:        bin/spork
-spork-cuke:   bin/spork cucumber
+sporkcuke:    bin/spork cucumber
 server:       bin/foreman start
 autotest:     bin/autotest
